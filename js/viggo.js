@@ -1,59 +1,21 @@
-// I hope this over-commenting helps. Let's do this!
-// Let's use the 'active' variable to let us know when we're using it
-let active = false;
+const sliderContainer = document.querySelector('.slider-container');
+const beforeImage = document.querySelector('.before-image');
+const afterImage = document.querySelector('.after-image');
+const sliderHandle = document.querySelector('.slider-handle');
 
-// First we'll have to set up our event listeners
-// We want to watch for clicks on our scroller
-document.querySelector('.scroller').addEventListener('mousedown',function(){
-    active = true;
-    // Add our scrolling class so the scroller has full opacity while active
-    document.querySelector('.scroller').classList.add('scrolling');
-});
-// We also want to watch the body for changes to the state,
-// like moving around and releasing the click
-// so let's set up our event listeners
-document.body.addEventListener('mouseup',function(){
-    active = false;
-    document.querySelector('.scroller').classList.remove('scrolling');
-});
-document.body.addEventListener('mouseleave',function(){
-    active = false;
-    document.querySelector('.scroller').classList.remove('scrolling');
-});
-
-// Let's figure out where their mouse is at
-document.body.addEventListener('mousemove',function(e){
-    if (!active) return;
-    // Their mouse is here...
-    let x = e.pageX;
-    // but we want it relative to our wrapper
-    x -= document.querySelector('.wrapper').getBoundingClientRect().left;
-    // Okay let's change our state
-    scrollIt(x);
-});
-
-// Let's use this function
-function scrollIt(x){
-    let transform = Math.max(0,(Math.min(x,document.querySelector('.wrapper').offsetWidth)));
-    document.querySelector('.after').style.width = transform+"px";
-    document.querySelector('.scroller').style.left = transform-25+"px";
+function moveHandle(e) {
+    const x = e.pageX - sliderContainer.offsetLeft;
+    if (x > 0 && x < sliderContainer.offsetWidth) {
+        sliderHandle.style.left = x + 'px';
+        beforeImage.style.width = x + 'px';
+        afterImage.style.width = sliderContainer.offsetWidth - x + 'px';
+    }
 }
 
-// Let's set our opening state based off the width, 
-// we want to show a bit of both images so the user can see what's going on
-scrollIt(150);
+sliderHandle.addEventListener('mousedown', function() {
+    document.addEventListener('mousemove', moveHandle);
+});
 
-// And finally let's repeat the process for touch events
-// first our middle scroller...
-document.querySelector('.scroller').addEventListener('touchstart',function(){
-    active = true;
-    document.querySelector('.scroller').classList.add('scrolling');
-});
-document.body.addEventListener('touchend',function(){
-    active = false;
-    document.querySelector('.scroller').classList.remove('scrolling');
-});
-document.body.addEventListener('touchcancel',function(){
-    active = false;
-    document.querySelector('.scroller').classList.remove('scrolling');
+document.addEventListener('mouseup', function() {
+    document.removeEventListener('mousemove', moveHandle);
 });
