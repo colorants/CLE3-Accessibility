@@ -1,14 +1,14 @@
 div#comparison {
-    width: 70vw;
-    height: 70vw;
+    width: 60vw;
+    height: 40vw;
     /*max-width: 600px;*/
     /*max-height: 600px;*/
     overflow: hidden;
-    margin-top: 50%; !important;
-    margin: auto;
+    margin: 3vh auto auto auto;
 }
 div#comparison figure {
-    background-image: url("/images/after-image.jpg");
+    background-image: url("/images/viggo/blur_1.jpg");
+    border-radius: 6px;
     background-size: cover;
     position: relative;
     font-size: 0;
@@ -17,12 +17,14 @@ div#comparison figure {
     margin: 0;
 }
 div#comparison figure > img {
+    border-radius: 6px;
     position: relative;
     left:50%;
     width: 100%;
 }
 div#comparison figure div {
-    background-image: url("/images/before-image.jpg");
+    background-image: url("/images/viggo/no_blur_1.jpg");
+    border-radius: 6px;
     background-size: cover;
     position: absolute;
     width: 50%;
@@ -36,8 +38,8 @@ input[type=range]{
     -webkit-appearance:none;
     -moz-appearance:none;
     position: relative;
-    top: -2rem; left: -2%;
-    background-color: rgba(255,255,255,0.1);
+    top: -2rem; left: -1%;
+    background-color: rgba(0,0,0,0.1);
     width: 102%;
 }
 input[type=range]:focus {
@@ -50,8 +52,8 @@ input[type=range]:active {
 input[type=range]::-moz-range-track {
     -moz-appearance:none;
     height:15px;
-    width: 98%;
-    background-color: rgba(255,255,255,0.1);
+    max-width: 95%;
+    background-color: rgba(0,0,0,0.1);
     position: relative;
     outline: none;
 }
@@ -61,20 +63,21 @@ input[type=range]::active {
 }
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance:none;
-    width: 20px; height: 15px;
-    background: #fff;
+    width: 20px; height: 1.125rem;
+    background: #858383;
     border-radius: 0;
 }
 input[type=range]::-moz-range-thumb {
     -moz-appearance: none;
     width: 20px;
     height: 15px;
-    background: #fff;
+    background: black;
     border-radius: 0;
 }
 input[type=range]:focus::-webkit-slider-thumb {
-    background: rgba(255,255,255,0.5);
+    background: rgba(0,0,0,0.5);
 }
 input[type=range]:focus::-moz-range-thumb {
-    background: rgba(255,255,255,0.5);
+    background: rgba(0, 0, 0, 0.5);
 }
+
