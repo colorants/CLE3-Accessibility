@@ -11,10 +11,12 @@
   <title>Viggo</title>
 
 </head>
-<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-
-  <div id="navbar" class="navbar-menu has-background-primary mb-2"  >
+<nav class="" role="navigation" aria-label="main navigation">
+  <div id="navbar" class="navbar-menu has-background-primary p-2">
     <div class="navbar-end">
+      <a class="navbar-item" href="index.html">
+        Home
+      </a>
       <a class="navbar-item" href="sem.html">
         Sem
       </a>
@@ -30,28 +32,51 @@
     </div>
   </div>
 </nav>
+
 <header>
-<h1></h1>
+<body>
+  <section class="hero is-fullheight-with-navbar">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+    <h1 class="title">
+      Blinfo
+    </h1>
+    <h2 class="subtitle">
+      Alles voor een visuele beperking
+    </h2>
+    </div>
+  </div>
+  </section>
+
+  <h1 class="title ml-2">
+    Title placeholder
+  </h1>
+  <p class="ml-2 pb-4">
+    Info placeholder
+  </p>
+  </body>
+  <hr class="solid">
 </header>
-<body class="m-6">
-<h1 class="title is-5">Hoe ziet een slechtziend persoon in een winkelstraat</h1>
-<h2 class="subtitle is-5">Wat valt op? (10% zicht)</h2>
+<div class="titletext m-2">
+<h2 class="title is-5">Hoe ziet een slechtziend persoon in een winkelstraat</h2>
+<h3 class="subtitle is-5">Wat valt op? (10% zicht)</h3>
+  </div>
 <div id="comparison">
   <figure >
     <div id="divisor"></div>
   </figure>
-  <input type="range" min="0" max="100" value="50" id="slider">
+  <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
 
 </div>
 
-
-<div id="source" class="has-text-centered" >
-<a class="is-flex is-centered" href="https://www.kroonvandiest.nl/images/com_jea/images/236/Martijn%20Vonck%20Fotografie%2022.jpg">Bron</a>
+<div class="container has-text-centered">
+<div id="source">
+<a href="https://www.kroonvandiest.nl/aanbod/236-nieuwe-gracht-98-b" target="_blank">Bron</a>
+</div>
 </div>
 </div>
 
 
 <script src="js/viggo.js"></script>
-</body>
 
 </html>
