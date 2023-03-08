@@ -52,53 +52,96 @@
   </div>
   </section>
 
+  <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Onderstreepte links</p>
+        <button class="js-modal-trigger" data-target="modal-js-example">
+          Meer informatie
+        </button>
+      </header>
+      <footer class="modal-card-foot">
+      </footer>
+    </div>
+  </div>
 
 <div class="m-4">
   <div class="tile is-ancestor">
     <div class="tile is-parent">
       <article class="tile is-child box">
-        <p class="popup" onclick="myFunction()">Onderstreepte links</p>
-          <span class="popuptext" id="myPopup">Popup text...</span>
+        <p class="title">Onderstreepte links</p>
         <img src="images/ceren/texts.png">
+        <button class="js-modal-trigger" data-target="modal-js-example">
+          Meer informatie
+        </button>
       </article>
     </div>
     <div class="tile is-parent">
       <article class="tile is-child box">
         <p class="title">Lettertype grootte</p>
         <img src="images/ceren/letters.png">
+        <button class="js-modal-trigger" data-target="modal-js-example">
+          Meer informatie
+        </button>
       </article>
     </div>
     <div class="tile is-parent">
       <article class="tile is-child box">
         <p class="title">Contrast</p>
-        <img src="images/ceren/contrast.png"
+        <img src="images/ceren/contrast.png">
+        <button class="js-modal-trigger" data-target="modal-js-example">
+          Meer informatie
+        </button>
       </article>
     </div>
   </div>
-</>
+</div>
 
   <div class="tile is-ancestor">
     <div class="tile is-parent">
       <article class="tile is-child box">
         <p class="title">Lettertype</p>
         <img src="images/ceren/style.png">
+        <button class="js-modal-trigger" data-target="modal-js-example">
+          Meer informatie
+        </button>
       </article>
     </div>
     <div class="tile is-parent">
       <article class="tile is-child box">
         <p class="title">Zwart wit</p>
         <img src="images/ceren/zwartwit.png">
+        <button class="js-modal-trigger" data-target="modal-js-example">
+          Meer informatie
+        </button>
       </article>
     </div>
     <div class="tile is-parent">
       <article class="tile is-child box">
         <p class="title">Spraak</p>
         <img src="images/ceren/geluid.png">
+        <button class="js-modal-trigger" data-target="modal-js-example">
+          Meer informatie
+        </button>
       </article>
     </div>
   </div>
 
+  <div id="modal-js-example" class="modal">
+    <div class="modal-background"></div>
+
+    <div class="modal-content">
+      <div class="box">
+        <p>++</p>
+        meow
+      </div>
+    </div>
+
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
 
 </body>
+<script src="js/ceren.js"></script>
 
 </html>
