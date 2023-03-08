@@ -11,6 +11,7 @@
   <title>Viggo</title>
 
 </head>
+<header>
 <nav class="" role="navigation" aria-label="main navigation">
   <div id="navbar" class="navbar-menu has-background-primary p-2">
     <div class="navbar-end">
@@ -33,8 +34,6 @@
   </div>
 </nav>
 
-<header>
-<body>
   <section class="hero is-fullheight-with-navbar">
   <div class="hero-body">
     <div class="container has-text-centered">
@@ -47,6 +46,7 @@
     </div>
   </div>
   </section>
+</header>
 
   <h1 class="title ml-2">
     Title placeholder
@@ -54,9 +54,9 @@
   <p class="ml-2 pb-4">
     Info placeholder
   </p>
-  </body>
+  <body>
   <hr class="solid">
-</header>
+
 <div class="titletext m-2">
 <h2 class="title is-5">Hoe ziet een slechtziend persoon in een winkelstraat</h2>
 <h3 class="subtitle is-5">Wat valt op? (10% zicht)</h3>
@@ -68,15 +68,31 @@
   <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
 
 </div>
-
 <div class="container has-text-centered">
 <div id="source">
 <a href="https://www.kroonvandiest.nl/aanbod/236-nieuwe-gracht-98-b" target="_blank">Bron</a>
 </div>
 </div>
-</div>
 
-
+  <div id="image-slider" class="splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide">
+          <img src="image01.jpg">
+        </li>
+        <li class="splide__slide">
+          <img src="image02.jpg">
+        </li>
+        <li class="splide__slide">
+          <img src="image03.jpg">
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    new Splide( '#image-slider' ).mount();
+  </script>
+  </body>
 <script src="js/viggo.js"></script>
 
 </html>
