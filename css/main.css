@@ -1,0 +1,14 @@
+.has-background-primary {
+    background-color: #282828 !important;
+    color: white !important;
+}
+
+.navbar-item  {
+    color: white !important;
+
+}
+
+.navbar-item:hover {
+background-color: #726f6f !important;
+    transition: 0.35s !important;
+}
