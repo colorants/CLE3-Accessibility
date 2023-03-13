@@ -1,7 +1,23 @@
-body {
-
+html{
+    font-family: Inter, sans-serif; !important;
+}
+.has-background-primary {
+    background-color: #282828 !important;
+    color: white !important;
 }
 
-.hero-body {
-    background-color: #232323 !important;
+.navbar-item  {
+    color: white !important;
+}
+.nav{
+    position: -webkit-sticky !important;
+}
+
+.navbar-item:hover {
+    background-color: #726f6f !important;
+    transition: 0.35s !important;
+}
+
+.hero {
+    background-color: #272727 !important;
 }
