@@ -1,5 +1,10 @@
-var divisor = document.getElementById("divisor"),
+let divisor = document.getElementById("divisor"),
     slider = document.getElementById("slider");
+
 function moveDivisor() {
     divisor.style.width = slider.value+"%";
 }
+
+
+
+
