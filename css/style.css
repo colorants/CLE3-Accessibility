@@ -21,13 +21,50 @@
     font-weight: 400;
     color: #75A526;
 }
+.section {
+    padding: 0;
+}
 .is-parent {
-    padding: 60px;
+    padding: 150px !important;
     width: 100%;
-    height: 100%;
+    background-color: white;
+
+}
+.parent-diff {
+    background-color: #ECEBEB;
 }
 .is-child {
-    max-width: 500px;
-    max-height: 500px;
-    padding: 40px;
+    height: 450px;
+    padding: 150px 100px 100px;
+}
+.is-child h3 {
+    font-size: 50px;
+}
+.is-child .is-text {
+    font-size: 20px;
+}
+.is-child:hover {
+    transition: 0.35s;
+    background-color: #75A526;
+    color: white;
+}
+.is-child:hover h3{
+    transition: 0.35s;
+    color: white;
+}
+.is-green {
+    background-color: #75A526;
+    color: white;
+}
+.is-green h3 {
+    color: #ffffff;
+}
+.is-green:hover {
+    transition: 0.35s;
+    background-color: #ECEBEB;
+    color: #000;
+}
+.is-green:hover h3 {
+    transition: 0.35s;
+    color: #000;
 }
