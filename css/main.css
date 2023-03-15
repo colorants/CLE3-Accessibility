@@ -16,6 +16,7 @@ html{
 }
 #nav{
     position: sticky !important;
+    height:2vw; !important;
 }
 
 .navbar-item:hover {
