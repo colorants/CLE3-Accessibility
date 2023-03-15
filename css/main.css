@@ -101,3 +101,36 @@ background-color: #726f6f !important;
     transition: 0.35s;
     color: #000;
 }
+
+.footer {
+    background-color: #282828;
+    color: white;
+}
+.footer h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+.footer .is-text {
+    font-size: 15px;
+    padding-top: 40px;
+}
+.footer .is-text a {
+    color: #75A526;
+}
+p strong {
+    color: #75A526;
+}
+.footer .is-text a:hover {
+    color: #ffffff;
+}
+
+.menu .menu-label {
+    color: #ffffff;
+}
+.menu-label {
+    padding: 10px;
+    justify-content: center;
+}
+.menu .menu-label:hover {
+    color: #75A526;
+}
