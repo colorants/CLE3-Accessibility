@@ -1,3 +1,5 @@
+
+
 html{
     font-family: Arial; !important;
 }
@@ -25,14 +27,14 @@ background-color: #726f6f !important;
 }
 
 
-hr {
-    background-color: black !important;
-}
-
 .hero-body-home{
     background-image: url("../images/main/background-mall.png");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.hero-body-home p {
+    color: black; !important;
 }
 
 .hero-content {
