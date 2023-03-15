@@ -11,52 +11,51 @@
   <title>Viggo</title>
 
 </head>
-<nav class="" role="navigation" aria-label="main navigation">
-  <div id="navbar" class="navbar-menu has-background-primary p-2">
-    <div class="navbar-end">
-      <a class="navbar-item" href="index.html">
-        Home
-      </a>
-      <a class="navbar-item" href="sem.html">
-        Sem
-      </a>
-      <a class="navbar-item" href="ceren.html">
-        Ceren
-      </a>
-      <a class="navbar-item" href="jordan.html">
-        Jordan
-      </a>
-      <a class="navbar-item" href="viggo.html">
-        Viggo
-      </a>
-    </div>
-  </div>
-</nav>
-
 <header>
-<body>
-  <section class="hero is-fullheight-with-navbar">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-    <h1 class="title">
-      Blinfo
-    </h1>
-    <h2 class="subtitle">
-      Alles voor een visuele beperking
-    </h2>
+  <section class="hero is-primary">
+    <div class="hero-body hero-body2 has-background-primary">
+      <p class="title">
+        Blinfo
+      </p>
+      <p class="subtitle">
+       placeholder
+      </p>
     </div>
-  </div>
   </section>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
 
-  <h1 class="title ml-2">
-    Title placeholder
+    <div id="navbar" class="navbar-menu has-background-primary"  >
+      <div class="navbar-end">
+        <a class="navbar-item" href="index.html">
+          Home
+        </a>
+        <a class="navbar-item" href="sem.html">
+          Sem
+        </a>
+        <a class="navbar-item" href="ceren.html">
+          Ceren
+        </a>
+        <a class="navbar-item" href="jordan.html">
+          Jordan
+        </a>
+        <a class="navbar-item" href="viggo.html">
+          Viggo
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <h1 class="title ml-2 mt-2">
+    Zien
   </h1>
   <p class="ml-2 pb-4">
-    Info placeholder
+   Zie hier hoe een slechtziend persoon in een bepaalde scenario's kijkt.
   </p>
-  </body>
+  <body>
   <hr class="solid">
-</header>
+
+  <div class="comp-1">
 <div class="titletext m-2">
 <h2 class="title is-5">Hoe ziet een slechtziend persoon in een winkelstraat</h2>
 <h3 class="subtitle is-5">Wat valt op? (10% zicht)</h3>
@@ -65,18 +64,37 @@
   <figure >
     <div id="divisor"></div>
   </figure>
-  <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
+  <input type="range" min="0" max="100" value="50" id="slider">
+</div>
+    </div>
 
 </div>
-
 <div class="container has-text-centered">
 <div id="source">
 <a href="https://www.kroonvandiest.nl/aanbod/236-nieuwe-gracht-98-b" target="_blank">Bron</a>
 </div>
-</div>
+
+  <div class="comp-2 mt-6"></div>
+  <div class="titletext m-2">
+    <h2 class="title is-5">Glaucoom</h2>
+    <h3 class="subtitle is-5">Bij glaucoom wordt de oogzenuw beschadigd. Hierdoor ontstaat geleidelijk verlies van uw gezichtsveld.
+      Meestal is de oogboldruk bij glaucoom te hoog, maar de oogboldruk kan ook normaal zijn. U heeft dan ‘normale druk glaucoom’. De behandeling bestaat uit het verlagen van de oogdruk. Ook bij normale druk glaucoom is dat vaak nodig.</h3>
+  </div>
 </div>
 
+  <div class="img-slider">
+    <img id="img-1" src="images/viggo/glaucoom_3.jpg" alt="Image 1" style="opacity: 1;"/>
+    <img id="img-2" src="images/viggo/glaucoom_2.jpg" alt="Image 2" style="opacity: 0;"/>
+    <img id="img-3" src="images/viggo/glaucoom_1.jpg" alt="Image 3" style="opacity: 0;"/>
+  </div>
+  <div class="navigation-button">
+    <span class="dot active" onclick="changeSlide(0)"></span>
+    <span class="dot" onclick="changeSlide(1)"></span>
+    <span class="dot" onclick="changeSlide(2)"></span>
+  </div>
+  </div>
 
+  </body>
 <script src="js/viggo.js"></script>
 
 </html>

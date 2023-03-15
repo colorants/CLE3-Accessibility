@@ -1,16 +1,21 @@
 html{
-    font-family: Inter, sans-serif; !important;
+    font-family: Arial; !important;
 }
 .has-background-primary {
     background-color: #282828 !important;
     color: white !important;
 }
 
+.is-primary{
+    background-color: #75A526; !important;
+    color: white !important;
+}
+
 .navbar-item  {
     color: white !important;
 }
-.nav{
-    position: -webkit-sticky !important;
+#nav{
+    position: sticky !important;
 }
 
 .navbar-item:hover {
@@ -18,10 +23,78 @@ background-color: #726f6f !important;
     transition: 0.35s !important;
 }
 
-.hero-body {
-    background-color: #75A526!important;
-}
 
 hr {
     background-color: black !important;
+}
+
+.hero-body-home{
+    background-image: url("../images/main/background-mall.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-content {
+    background-color: #393939;
+    padding: 6rem;
+    border-radius: 60%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+.hero-content h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #75A526;
+}
+.section {
+    padding: 0;
+}
+.is-parent {
+    padding: 150px !important;
+    width: 100%;
+    background-color: white;
+
+}
+.parent-diff {
+    background-color: #ECEBEB;
+}
+.is-child {
+    height: 450px;
+    padding: 150px 100px 100px;
+}
+.is-child h3 {
+    font-size: 50px;
+}
+.is-child .is-text {
+    font-size: 20px;
+}
+.is-child:hover {
+    transition: 0.35s;
+    background-color: #75A526;
+    color: white;
+}
+.is-child:hover h3{
+    transition: 0.35s;
+    color: white;
+}
+.is-green {
+    background-color: #75A526;
+    color: white;
+}
+.is-green h3 {
+    color: #ffffff;
+}
+.is-green:hover {
+    transition: 0.35s;
+    background-color: #ECEBEB;
+    color: #000;
+}
+.is-green:hover h3 {
+    transition: 0.35s;
+    color: #000;
 }
