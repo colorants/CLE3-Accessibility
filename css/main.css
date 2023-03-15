@@ -29,11 +29,10 @@ hr {
     background-color: black !important;
 }
 
-.hero-body{
+.hero-body-home{
     background-image: url("../images/main/background-mall.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #75A526!important;
 }
 
 .hero-content {
