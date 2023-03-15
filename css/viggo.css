@@ -151,10 +151,17 @@ input[type=range]:focus::-moz-range-thumb {
 }
 
 .navbar-menu {
-    space: 2%; !important;
     display: flex; !important;
     justify-content: center; !important;
-    height: 5vh; !important;
+    height: 10vh; !important;
+}
+
+.navbar-item{
+    padding-left: 2%;
+    padding-right: 2%;
+    color: #75A526; !important;
+    font-size: 1.2em; !important;
+    font-weight: bold;
 }
 
 hr {
