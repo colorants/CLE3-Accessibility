@@ -28,9 +28,11 @@ background-color: #726f6f !important;
 
 
 .hero-body-home{
-    background-image: url("../images/main/background-mall.png");
+    background-image: url("../images/pexels-yan-krukau-7694420.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    padding-left: 15% !important;
+    padding-right: 15% !important;
 }
 
 .hero-body-home p {
@@ -38,11 +40,10 @@ background-color: #726f6f !important;
 }
 
 .hero-content {
-    background-color: #393939;
-    padding: 6rem;
+    background-color: #282828;
+    padding: 6rem !important;
     border-radius: 60%;
-    margin-left: 15%;
-    margin-right: 15%;
+
 }
 .hero-content h1 {
     font-size: 3rem;
