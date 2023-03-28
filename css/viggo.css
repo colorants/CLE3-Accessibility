@@ -139,7 +139,7 @@ input[type=range]:focus::-moz-range-thumb {
 .hero-body-viggo {
     background-image: url("/images/main/hero-image-1.jpg");
     color: #75A526; !important;
-  image-size: center; !important;
+    background-size: cover; !important;
 }
 
 

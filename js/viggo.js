@@ -1,5 +1,7 @@
 window.addEventListener('load', init);
 //global variables//
+let homeButton = document.getElementById("brandTitle");
+
 let divisor = document.getElementById("divisor"); // the element that will be resized
 let slider = document.getElementById("slider"); // the slider
 
@@ -18,6 +20,9 @@ let n = 0; // index of the first dot
 
 
 function init() {
+    //event listeners//
+  homeButton.addEventListener('click', pageSwitcher);
+
     //give data attributes to pictures//
     let dot1 = nav.getElementById("dot-1");
     let dot2 = nav.getElementById("dot-2");
@@ -30,6 +35,7 @@ function init() {
     document.getElementById("img-2").addEventListener('click', () => changeSlide(1));
     document.getElementById("img-3").addEventListener('click', () => changeSlide(2));
 
+    //functions
     function changeSlide(n) {
         for (let i = 0; i < imgs.length; i++) { // reset
             imgs[i].style.opacity = 0;
@@ -44,6 +50,10 @@ function init() {
     function moveDivisor() {
         divisor.style.width = slider.value + "%"; // set the width of the element to the value of the slider
     }
+
     slider.addEventListener('input', moveDivisor); // when the slider is moved, call the function moveDivisor
 
+    function pageSwitcher() {
+        window.location.href = "index.html";
+    }
 
