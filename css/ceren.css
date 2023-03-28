@@ -21,6 +21,7 @@
     cursor: pointer;
     transition: all 0.3s ease-out;
 }
+
 .button:hover {
     background: gray;
 }
@@ -82,3 +83,25 @@
         width: 70%;
     }
 }
+
+.hero-body-ceren {
+    background-image: url("/images/main/hero-image-3.jpg");
+    color: black !important;
+    background-size: cover; !important;
+    background-position: 0 -520px;
+
+}
+
+
+hr {
+    background-color: black !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 5% !important;
+    margin-bottom: 5% !important;
+}
+.has-background-primary {
+    background-color: #282828 !important;
+    color: white !important;
+}
+
