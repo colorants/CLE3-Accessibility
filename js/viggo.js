@@ -37,6 +37,7 @@ function init() {
 
     //functions
     function changeSlide(n) {
+        console.log(n);
         for (let i = 0; i < imgs.length; i++) { // reset
             imgs[i].style.opacity = 0;
             dots[i].classList.remove('active');
