@@ -1,7 +1,7 @@
 
 
 html{
-    font-family: Arial; !important;
+    font-family: Arial, serif; !important;
 }
 .has-background-primary {
     background-color: #282828 !important;
@@ -22,7 +22,7 @@ html{
 }
 
 .navbar-item:hover {
-background-color: #726f6f !important;
+    background-color: #726f6f !important;
     transition: 0.35s !important;
 }
 
