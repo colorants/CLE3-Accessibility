@@ -1,3 +1,18 @@
+html{
+    background-color: #75A526;
+}
+.comparisons{
+ text-align :  center; !important;
+    margin: 0 auto; !important;
+    max-width: 70vw; !important;
+    background-color: white;
+    box-shadow: black;
+}
+
+#nav-container {
+min-width: 100vw; !important;
+}
+
 div#comparison  {
     width: 50vw;
     height: 40vw;
@@ -82,22 +97,20 @@ input[type=range]:focus::-moz-range-thumb {
 }
 
 .img-slider {
-    margin-left: 25%;
-    margin-right: 25%;
     width: 100%;
     height: 510px;
     position: relative;
+    margin-left: 15%;
 }
 
 .img-slider img {
     z-index: 1;
-    margin: auto;
     width: 50vw;
     height: 40vw;
-    position: absolute;
     top: 0;
     left: 0;
     border-radius: 6px;
+    position: absolute; !important;
 }
 
 .img-slider img:first-child {
@@ -131,23 +144,12 @@ input[type=range]:focus::-moz-range-thumb {
 }
 
 .container {
-    margin: 0 ; !important;
-    padding : 0; !important;
     min-width: 100% !important;
+    padding-bottom: 10%; !important;
 }
 
 .hero-body-viggo {
     background-image: url("/images/main/hero-image-1.jpg");
     color: #75A526; !important;
     background-size: cover; !important;
-}
-
-
-
-hr {
-    background-color: black !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-top: 5% !important;
-    margin-bottom: 5% !important;
 }

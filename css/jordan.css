@@ -18,3 +18,22 @@
 .column {
     margin: 0 auto; !important;
 }
+
+.hero-body-jordan {
+    background-image: url("/images/main/hero-image-3.jpg");
+    color: #75A526; !important;
+    background-size: 100% 350%; !important;
+    background-repeat: no-repeat;
+}
+
+.is-large {
+    background-color: #282828; !important;
+}
+
+.hero-title {
+    color: white; !important;
+}
+
+.hero-sub {
+    color: white; !important;
+}

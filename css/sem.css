@@ -1,0 +1,32 @@
+.hero-body-sem {
+    background-image: url(../images/main/hero-image-2.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: 100% 270%;
+}
+.is-parent {
+        background-color: #ECEBEB !important;
+}
+.parent-diff {
+    background-color: #fff !important;
+}
+.is-child {
+    background-color: #282828 !important;
+    color: #fff;
+}
+.is-child h3 {
+    color: #fff;
+}
+.is-child:hover {
+    background-color: #75A526 !important;
+    color: #fff;
+}
+.is-green {
+    background-color: #75A526 !important;
+}
+.is-green:hover {
+    background-color: #282828 !important;
+    color: #fff;
+}
+.is-green:hover h3 {
+    color: #fff;
+}
