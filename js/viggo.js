@@ -1,68 +1,88 @@
-// window.addEventListener('load', init);
-// //global variables//
-// let homeButton = document.getElementById("brandTitle");
-//
-// let divisor = document.getElementById("divisor"); // the element that will be resized
-// let slider = document.getElementById("slider"); // the slider
-//
-// let nav = document.getElementById("nav-dots"); // the navigation
-// let imgs = document.querySelectorAll('.img-slider img'); // the images
-// let dots = document.querySelectorAll('.dot'); // the dots
-// let img1 = document.getElementById("img-1");
-// let img2 = document.getElementById("img-2");
-// let img3 = document.getElementById("img-3");
-// img1.setAttribute("data-img", "0");
-// img2.setAttribute("data-img", "1");
-// img3.setAttribute("data-img", "2");
-//
-// let currentImg = 0; // index of the first image
-// let n = 0; // index of the first dot
-//
-//
-// function init() {
-//     //event listeners//
-//     homeButton.addEventListener('click', pageSwitcher);
-//
-//     //give data attributes to pictures//
-//     let dot1 = nav.getElementById("dot-1");
-//     let dot2 = nav.getElementById("dot-2");
-//     let dot3 = nav.getElementById("dot-3");
-//     dot1.addEventListener('click', () => changeSlide(0));
-//     dot2.addEventListener('click', () => changeSlide(1));
-//     dot3.addEventListener('click', () => changeSlide(2));
-//     //event listeners//
-//     document.getElementById("img-1").addEventListener('click', () => changeSlide(0));
-//     document.getElementById("img-2").addEventListener('click', () => changeSlide(1));
-//     document.getElementById("img-3").addEventListener('click', () => changeSlide(2));
-// }
-//
-//     //functions
-//     function changeSlide(n) {
-//         console.log(n);
-//         for (let i = 0; i < imgs.length; i++) { // reset
-//             imgs[i].style.opacity = 0;
-//             dots[i].classList.remove('active');
-//         }
-//         currentImg = n;
-//         imgs[currentImg].style.opacity = 1;
-//         dots[currentImg].classList.add('active');
-//     }
-//
-//
-//     function moveDivisor() {
-//         divisor.style.width = slider.value + "%"; // set the width of the element to the value of the slider
-//     }
-//
-//     slider.addEventListener('input', moveDivisor); // when the slider is moved, call the function moveDivisor
-//
-//     function pageSwitcher() {
-//         window.location.href = "index.html";
-//     }
+const slider = document.getElementById("slider");
+const divisor = document.getElementById("divisor");
+const image1 = document.getElementById("img-1");
+const image2 = document.getElementById("img-2");
+const image3 = document.getElementById("img-3");
+const button1 = document.getElementById('button1');
+const button2 = document.getElementById('button2');
+const button3 = document.getElementById('button3');
+const opacity = "1";
+const noOpacity = "0";
+const resetButton = document.getElementById("resetButton");
 
-let divisor = document.getElementById("divisor"); // the element that will be resized
-let slider = document.getElementById("slider"); // the slider
+
+
+window.addEventListener('load', init);
+
+// this function will be called when the page is loaded
+function init () {
+    imageSlider();
+    resetButton.addEventListener('click', reset);
+}
+
+// reset button
+function reset() {
+    localStorage.clear();
+    divisor.style.width = "50%";
+    slider.value = "50";
+}
+
+// move the divisor when the slider is moved
 
 function moveDivisor() {
-    divisor.style.width = slider.value + "%"; // set the width of the element to the value of the slider
+    localStorage.setItem('sliderValue', slider.value);
+    divisor.style.width = slider.value + "%";
+    console.log("Slider value after setting local storage:", slider.value);
 }
-slider.addEventListener('input', moveDivisor); // when the slider is moved, call the function moveDivisor
+
+window.addEventListener("load", function() {
+    const storedValue = localStorage.getItem('sliderValue');
+    if (storedValue) {
+        divisor.style.width = storedValue + "%";
+        slider.value = storedValue;
+        console.log("Slider value after setting width and value:", slider.value);
+    }
+});
+
+// Set the slider value to the stored value when the slider is moved
+slider.addEventListener("input", function() {
+    moveDivisor();
+   let storedValue = localStorage.getItem('sliderValue');
+    slider.value = storedValue;
+});
+
+// 3 dotted image slider , dots change on click
+function imageSlider() {
+
+// add event listeners to the buttons
+button1.addEventListener('click', () => {
+   image1.style.opacity = opacity;
+   image2.style.opacity = noOpacity;
+   image3.style.opacity = noOpacity;
+   button1.classList.add("active");
+   button2.classList.remove("active");
+    button3.classList.remove("active");
+
+});
+
+button2.addEventListener('click', () => {
+    image1.style.opacity = noOpacity;
+    image2.style.opacity = opacity;
+    image3.style.opacity = noOpacity;
+    button1.classList.remove("active");
+    button2.classList.add("active");
+    button3.classList.remove("active");
+});
+
+button3.addEventListener('click', () => {
+    image1.style.opacity = noOpacity;
+    image2.style.opacity = noOpacity;
+    image3.style.opacity = opacity;
+     button1.classList.remove("active");
+    button2.classList.remove("active");
+    button3.classList.add("active");
+});
+}
+
+
+

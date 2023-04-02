@@ -1,6 +1,27 @@
 html{
     background-color: #75A526;
 }
+
+#resetButton{
+    background-color: #75A526; !important;
+    border: none !important;
+}
+#resetButton:hover{
+    background-color: #52751b; !important;
+    border: none !important;
+}
+
+#resetButton:active{
+    background-color: #2b3d0e; !important;
+    border: none !important;
+}
+
+#resetButton:focus{
+    background-color: #75A526; !important;
+    border: none !important;
+    box-shadow: none; !important;
+}
+
 .comparisons{
  text-align :  center; !important;
     margin: 0 auto; !important;
