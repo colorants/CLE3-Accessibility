@@ -13,10 +13,15 @@
 //
 // console.log(myObj_deserialized)
 
-const buttonTwo = document.querySelector('.btn-2');
+
+const buttonOne = document.querySelector('.btn-1');
+const buttonTwo = document.querySelector('.btn-2')
+const buttonThree = document.querySelector('.btn-3')
 
 function alertBtn () {
     alert('Klik OK om door te gaan naar de navigatie');
 }
 
+buttonOne.addEventListener("click", alertBtn);
 buttonTwo.addEventListener("click", alertBtn);
+buttonThree.addEventListener("click", alertBtn);
