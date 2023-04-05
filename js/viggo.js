@@ -1,4 +1,4 @@
-let apiUrl = "http://localhost/CLE3-Accessibility/webservice/viggo-webservice.php"
+// let apiUrl = "http://localhost/CLE3-Accessibility/webservice/viggo-webservice.php"
 
 window.addEventListener("load", init); // wait for the page to load
 
@@ -18,11 +18,10 @@ let resetButton;
 let modal;
 let modalBtn;
 let closeBtn;
+let storedValue;
 
 // event listeners
 function init() {
-
-
     image1 = document.getElementById("img-1");
     image2 = document.getElementById("img-2");
     image3 = document.getElementById("img-3");
@@ -37,9 +36,7 @@ function init() {
     modalBtn = document.getElementById('infoButton');
 //get close button
     closeBtn = document.getElementById('closeModal');
-
     resetButton.addEventListener('click', reset);
-    moveDivisor();
     imageSlider();
     openModal();
     closeModal();
@@ -96,7 +93,7 @@ function moveDivisor() {
 // Set the slider value to the stored value when the slider is moved
 slider.addEventListener("input", function() {
     moveDivisor();
-    let storedValue = localStorage.getItem('sliderValue');
+    storedValue = localStorage.getItem('sliderValue');
     slider.value = storedValue;
 });
 
@@ -108,7 +105,7 @@ window.addEventListener("load", function() {
     }
 });
 
-// modal opener
+// get the modal
 
 // listen for open click
 modalBtn.addEventListener('click', openModal);
