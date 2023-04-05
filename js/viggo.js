@@ -15,6 +15,9 @@ let button3;
 const opacity = 1;
 const noOpacity = 0;
 let resetButton;
+let modal;
+let modalBtn;
+let closeBtn;
 
 // event listeners
 function init() {
@@ -28,9 +31,19 @@ function init() {
     button3 = document.getElementById('dot-3');
     resetButton = document.getElementById("resetButton");
 
+    // get modal
+     modal = document.getElementById('info-details');
+//get open modal button
+    modalBtn = document.getElementById('infoButton');
+//get close button
+    closeBtn = document.getElementById('closeModal');
+
     resetButton.addEventListener('click', reset);
     moveDivisor();
     imageSlider();
+    openModal();
+    closeModal();
+    clickOutside();
 }
 
 
@@ -95,6 +108,30 @@ window.addEventListener("load", function() {
     }
 });
 
+// modal opener
 
+// listen for open click
+modalBtn.addEventListener('click', openModal);
+//listen for close click
+closeBtn.addEventListener('click', closeModal);
+//listen for outside click
+window.addEventListener('click', clickOutside);
+
+//function to open modal
+function openModal(){
+    modal.style.display = 'block';
+}
+
+//function to close modal
+function closeModal(){
+    modal.style.display = 'none';
+}
+
+//function to close modal if outside click
+function clickOutside(e){
+    if(e.target == modal) {
+        modal.style.display = 'none';
+    }
+}
 
 
