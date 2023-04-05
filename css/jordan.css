@@ -37,3 +37,43 @@
 .hero-sub {
     color: white; !important;
 }
+
+/* styling for the image container */
+#main-heading {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, serif; !important;
+    font-size: 3rem;
+    font-style: inherit;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    padding: 30px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #75A526;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
