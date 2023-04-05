@@ -22,6 +22,7 @@
       </p>
     </div>
   </section>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
 
     <div id="navbar" class="navbar-menu has-background-primary">
         <a class="navbar-item" href="index.html">
@@ -56,9 +57,8 @@
   <hr class="solid">
 
   <div class="comp-1">
-<div class="titletext">
-<h2 class="title is-5 m-2">Hoe ziet een slechtziend persoon in een winkelstraat</h2>
-<h3 class="subtitle is-5 m-2">Wat valt op? (10% zicht)</h3>
+<h2 class="title is-5 m-2 " id="title-1">Hoe ziet een slechtziend persoon in een winkelstraat</h2>
+<h3 class="subtitle is-5 m-2" id="description-1">Wat valt op? (10% zicht)</h3>
   </div>
 <div id="comparison">
   <figure >
@@ -66,7 +66,6 @@
   </figure>
   <input type="range" min="0" max="100" value="" id="slider">
 </div>
-    </div>
 
   <button class="button is-primary m-2" id="resetButton">Reset</button>
 
@@ -76,14 +75,12 @@
 </div>
 </div>
 
-  <div class="container">
     <div class="comp-2"></div>
     <div class="titletext">
-      <h2 class="title is-5 m-2">Glaucoom</h2>
+      <h2 class="title is-5 m-2" id>Glaucoom</h2>
       <h3 class="subtitle is-5 m-2">Bij glaucoom wordt de oogzenuw beschadigd. Hierdoor ontstaat geleidelijk verlies van het gezichtsveld.
         Meestal is de oogboldruk bij glaucoom te hoog, maar de oogboldruk kan ook normaal zijn. Dat heet ‘normale druk glaucoom’. De behandeling bestaat uit het verlagen van de oogdruk. Ook bij normale druk glaucoom is dat vaak nodig.</h3>
     </div>
-  </div>
 
 
   <div class="img-slider">
@@ -91,22 +88,28 @@
     <img id="img-2" src="images/viggo/glaucoom_2.jpg" alt="Image 2" style="opacity: 0;"/>
     <img id="img-3" src="images/viggo/glaucoom_1.jpg" alt="Image 3" style="opacity: 0;"/>
   </div>
+
+</div>
+  <div class="navigation-button pb-3" id="nav-dots">
+    <span class="dot active" id="dot-1" ></span>
+    <span class="dot"        id="dot-2" ></span>
+    <span class="dot"        id="dot-3"   ></span>
+  </div>
+  <button class="button is-primary m-2" id="infoButton">Meer Info</button>
+  <dialog class="modal" id="info-detail">
+    <div class="modal-content"></div>
+    <button class="modal-close">❌</button>
+  </dialog>
   <div id="source">
     <a href="https://verkeersregels.vvn.nl/situatie/blokkeren" target="_blank">Bron</a>
   </div>
-</div>
 
-  <div class="navigation-button pb-3" id="nav-dots">
-    <span class="dot active" id="dot-1" ></span>
-    <span class="dot"        id="dot-2 " ></span>
-    <span class="dot"        id="dot-3"   ></span>
-  </div>
 </div>
 
 
 
 <script src="js/viggo.js"></script>
-</div>
+
 </body>
 <footer>
   <div class="footer">
