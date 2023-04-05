@@ -3,33 +3,20 @@
 /**
  * @return array
  */
-function getDishes()
+function getInfo()
 {
     return [
         [
             "id" => 1,
-            "name" => "Pizza",
-            "kitchen" => "Italian",
+            "name" => "Zara",
         ],
         [
             "id" => 2,
-            "name" => "Kale",
-            "kitchen" => "Dutch",
+            "name" => "h&m",
         ],
         [
             "id" => 3,
-            "name" => "Lasagna",
-            "kitchen" => "Italian",
-        ],
-        [
-            "id" => 4,
-            "name" => "Kebab",
-            "kitchen" => "Turkish",
-        ],
-        [
-            "id" => 5,
-            "name" => "Paella",
-            "kitchen" => "Spanish",
+            "name" => "c&a",
         ]
     ];
 }
@@ -38,29 +25,19 @@ function getDishes()
  * @param $id
  * @return mixed
  */
-function getDishDetails($id)
+function getInfoDetails($id)
 {
     $tags = [
         1 => [
-            "recipe" => "Put it in the oven and go!",
-            "tags" => ['cheese', 'oven']
+            "location" => "Binnenwegplein 31, 3012 KA Rotterdam",
         ],
         2 => [
-            "recipe" => "You can make this delicious Dutch meal by ...",
-            "tags" => ['unox', 'healthy', 'stamppot', 'boerenkool']
+            "location" => "Binnenwegplein 31, 3012 KA Rotterdam",
         ],
         3 => [
-            "recipe" => "Very nice when your grandma prepares this meal",
-            "tags" => ['omnomnom']
-        ],
-        4 => [
-            "recipe" => "Everytime in the city after midnight",
-            "tags" => ['kapsalon', 'tasty', 'meat']
-        ],
-        5 => [
-            "recipe" => "Specialty when on holiday in Spain",
-            "tags" => ['fish']
-        ],
+            "location" => "Binnenwegplein 31, 3012 KA Rotterdam",
+        ]
+
     ];
 
     return $tags[$id];
