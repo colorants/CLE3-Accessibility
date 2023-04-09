@@ -77,3 +77,8 @@ button {
     cursor: pointer;
 }
 
+/* like button */
+.like-button {
+    padding-top: 10px;
+}
+

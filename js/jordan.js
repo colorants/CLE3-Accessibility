@@ -1,17 +1,4 @@
-// let myObj = {
-//     name: "Zara",
-//     location: "Zuid-Holland",
-//     number: 638999990
-//
-// };
-//
-// let myObj_serialized = JSON.stringify(myObj);
-//
-// localStorage.setItem("myObj", myObj_serialized);
-//
-// let myObj_deserialized = JSON.parse(localStorage.getItem("myObj"));
-//
-// console.log(myObj_deserialized)
+window.addEventListener("load", init); // wait for the page to load
 
 
 const buttonOne = document.querySelector('.btn-1');
@@ -19,9 +6,12 @@ const buttonTwo = document.querySelector('.btn-2')
 const buttonThree = document.querySelector('.btn-3')
 
 
-// const h1 = document.createElement('h1');
-// h1.innerText = "Toegankelijke Winkels in Rotterdam"
-// document.body.appendChild(h1);
+
+
+function init() {
+    resetButton = document.getElementById("resetButton");
+    resetButton.addEventListener('click', reset);
+}
 
 function alertBtn () {
     alert('Klik OK om door te gaan naar de navigatie');
@@ -31,3 +21,18 @@ function alertBtn () {
 buttonOne.addEventListener("click", alertBtn);
 buttonTwo.addEventListener("click", alertBtn);
 buttonThree.addEventListener("click", alertBtn);
+
+// stores the amount of click by number
+function clickCounter(){
+    if (localStorage.clickcount){
+        localStorage.clickcount = Number(localStorage.clickcount) + 1;
+    } else {
+        localStorage.clickcount = 1;
+    }
+    document.getElementById("num_count").innerHTML = localStorage.clickcount;
+}
+
+// reset button for localstorage
+function reset() {
+    localStorage.clear();
+}
