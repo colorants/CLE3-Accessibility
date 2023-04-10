@@ -32,6 +32,42 @@ function getOptions()
         ];
 }
 
+
+/**
+ * @return array
+ */
+function getFoto()
+{
+    return [
+        [
+            "id" => 1,
+            "foto" => "Links",
+        ],
+        [
+            "id" => 2,
+            "foto" => "Grootte",
+        ],
+        [
+            "id" => 3,
+            "foto" => "Contrast",
+        ],
+        [
+            "id" => 4,
+            "foto" => "Lettertype",
+        ],
+        [
+            "id" => 5,
+            "name" => "Zwart-wit",
+        ],
+        [
+            "id" => 6,
+            "name" => "Spraak",
+        ]
+    ];
+}
+
+
+
 /**
  * @param $id
  * @return mixed
@@ -104,3 +140,5 @@ function getOptionDetails($id)
 
     return $tags[$id];
 }
+
+

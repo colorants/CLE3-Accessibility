@@ -6,7 +6,7 @@ let favo = localStorage.getItem('allFavo') ? JSON.parse(localStorage.getItem('al
 
 
 
-//AJAX-call to retrieve data from a webservice thx sem de pem
+//data via ajax
 async function ajaxRequest(url) {
     const response = await fetch(url);
     const jsonData = await response.json();
@@ -24,6 +24,7 @@ async function getDetails(id) {
     return jsonData
 }
 
+//change color fav butt
 function setFavo() {
     if (!favo.includes(this.id)) {
         favo.push(this.id);
@@ -48,5 +49,54 @@ for (let i = 0; i < favButts.length; i++) {
 for (let i = 0; i < favo.length; i++) {
     document.getElementById(favo[i]).style.backgroundColor = 'pink';
 }
+
+//pictures in array
+var imgArray = new Array();
+
+imgArray[0] = new Image();
+imgArray[0].src = 'images/ceren/texts.png';
+
+imgArray[1] = new Image();
+imgArray[1].src = 'images/ceren/letters.png';
+
+imgArray[2] = new Image();
+imgArray[2].src = 'images/ceren/contrast.png';
+
+imgArray[3] = new Image();
+imgArray[3].src = 'images/ceren/style.png';
+
+imgArray[4] = new Image();
+imgArray[4].src = 'images/ceren/zwartwit.png';
+
+imgArray[5] = new Image();
+imgArray[5].src = 'images/ceren/geluid.png';
+
+/*------------------------------------*/
+
+function nextImage(element)
+{
+    var img = document.getElementById(element);
+
+    for(var i = 0;i<imgArray.length;i++)
+    {
+        if(imgArray[i] == img)
+        {
+            if(i == imgArray.length)
+            {
+                var j = 0;
+                document.getElementById(element).src = imgArray[j].src;
+                break;
+            }
+            else
+                var j = i + 1;
+            document.getElementById(element).src = imgArray[j].src;
+            break;
+        }
+    }
+}
+
+
+
+
 
 ajaxRequest(apiUrl);
