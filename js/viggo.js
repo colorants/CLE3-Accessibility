@@ -27,10 +27,20 @@ const noOpacity = 0;
 let resetButton;
 let storedValue;
 let comp1;
+let detailButton;
+let detailContent;
+let detailDialog;
 
 // event listeners
 function init() {
+
     comp1 = document.getElementById("comp-1");
+    detailContent = detailDialog.querySelector('.modal-content');
+    detailDialog = document.getElementById('info-detail');
+    detailContent = detailDialog.querySelector('.modal-content');
+    detailDialog.addEventListener('click', detailModalClickHandler);
+    detailDialog.addEventListener('close', dialogCloseHandler);
+
     image1 = document.getElementById("img-1");
     image2 = document.getElementById("img-2");
     image3 = document.getElementById("img-3");
@@ -38,9 +48,13 @@ function init() {
     button2 = document.getElementById('dot-2');
     button3 = document.getElementById('dot-3');
     resetButton = document.getElementById("resetButton");
+    detailButton = document.getElementById("detailButton");
     resetButton.addEventListener('click', reset);
     imageSlider();
-    ajaxRequest(apiUrl, createInfoDiv);
+
+
+    detailButton.addEventListener('click', infoCardClickHandler);
+    ajaxRequest(apiUrl, createInfoCards())
 }
 
 
@@ -76,56 +90,99 @@ function imageSlider(){
         button3.classList.add("active");
     });
 }
-
-function ajaxRequest(url, succesHandler) {
+function ajaxRequest(url, successHandler) {
+    console.log(url)
     fetch(url)
-        .then((resp) => {
-            if (!resp.ok) {
-                throw new Error(resp.statusText);
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(response.statusText);
             }
-            return resp.json();
+            return response.json();
         })
-        .then(succesHandler)
+        .then(successHandler)
         .catch(ajaxErrorHandler);
 }
 
-function createInfoDiv(data) {
-    for (let info of data) {
-        let infoDiv = document.createElement('div');
-        infoDiv.classList.add();
-        infoDiv.dataset.name = info.name;
-        comp1.appendChild(infoDiv);
+//Create initial info cards based on initial API data
 
+function createInfoCards(info) {
+    ajaxRequest(apiUrl, function(info) {
+        for (let data of info) {
+            let infoCard = document.createElement('div');
+            infoCard.dataset.title = data.title;
+            comp1.appendChild(infoCard);
 
-        // ajax request based on current id
-        ajaxRequest(apiUrl + '?id=' + info.id, fillInfoDiv);
-
-    }
+            // ajax request based on current id
+            ajaxRequest(apiUrl + '?id=' + data.id, function(data) {
+                fillInfoCard(data, infoCard);
+            });
+        }
+    });
 }
 
-function fillInfoDiv(data) {
-
-  let infoTitle = document.querySelectorAll(`.info-div[data-title='${data.name}']`);
-
-    let title = document.createElement("h2");
-    title.classList.add("title is-5 m-2");
+//Fill the info card with the retrieved data
+function fillInfoCard(data, infoCard) {
+    let title = document.createElement('h2');
+    title.classList.add('title', 'is-5', 'm-2');
     title.innerHTML = data.title;
-    infoTitle.appendChild(title);
+    infoCard.appendChild(title);
 
-    let infoText = document.createElement("h3");
-    infoText.classList.add("subtitle is-6 m-2");
-    infoText.innerHTML = data.description;
-    infoTitle.appendChild(infoText);
+    let subtitle = document.createElement('h3');
+    subtitle.classList.add('subtitle', 'is-6', 'm-2');
+    subtitle.innerHTML = data.description;
+    infoCard.appendChild(subtitle);
 
     apiData[data.id] = data;
-
+    console.log(apiData);
 }
 
+
+//ajax error handler
 function ajaxErrorHandler(data) {
     let error = document.createElement('div');
     error.classList.add('error');
     error.innerHTML = '<p>Something went wrong with the API call</p>';
     comp1.before(error);
+}
+
+function infoCardClickHandler(event) {
+    let clickedItem = event.target;
+
+    if (clickedItem.nodeName !== 'BUTTON') {
+        return;
+    }
+
+    // retrieve information from the global apiData object
+    let data = apiData[clickedItem.dataset.id];
+
+    // reset the content of the modal
+    detailContent.innerHTML = '';
+
+    // show the name we used on the main grid
+    let title = document.createElement('h3');
+    title.innerHTML = '<h3>' + data.title + '</h3>';
+    detailContent.appendChild(title);
+
+    // show the description
+    let description = document.createElement('p');
+    detailContent.innerHTML += '<p>' + data.description + '</p>';
+    detailContent.appendChild(description);
+
+    // open modal
+    detailDialog.showModal();
+    gallery.classList.add('dialog-open');
+}
+
+function detailModalClickHandler(event) {
+
+    if (event.target.nodeName === 'DIALOG' || event.target.nodeName === 'BUTTON') {
+        detailDialog.close();
+    }
+}
+
+//close handler for the modal
+function dialogCloseHandler() {
+    gallery.classList.remove('dialog-open');
 }
 
 ///////////////////////////

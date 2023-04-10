@@ -53,12 +53,13 @@
   <p class="m-2">
    Zie hier hoe een slechtziend persoon in een bepaalde scenario's kijkt.
   </p>
-
   <hr class="solid">
 
   <div id="comp-1">
-<!--<h2 class=" titleTag" id="title-1">X</h2>-->
-<!--<h3 class="subtitle is-5 m-2" id="description-1">Wat valt op? (10% zicht)</h3>-->
+    <dialog class="modal" id="info-detail">
+      <div class="modal-content" id="modal-content"></div>
+      <button class="modal-close button" id="modal-close"></button>
+    </dialog>
   </div>
 <div id="comparison">
   <figure >
@@ -66,7 +67,7 @@
   </figure>
   <input type="range" min="0" max="100" value="" id="slider">
 </div>
-
+  <button class="button is-primary m-2" id="detailButton">Meer info</button>
   <button class="button is-primary m-2" id="resetButton">Reset</button>
 
 <div class="container has-text-centered">
@@ -77,7 +78,7 @@
 
     <div class="comp-2"></div>
     <div class="titletext">
-      <h2 class="title is-5 m-2 titleTag">X</h2>
+      <h2 class="title is-5 m-2 titleTag">Glaucoom</h2>
       <h3 class="subtitle is-5 m-2">Bij glaucoom wordt de oogzenuw beschadigd. Hierdoor ontstaat geleidelijk verlies van het gezichtsveld.
         Meestal is de oogboldruk bij glaucoom te hoog, maar de oogboldruk kan ook normaal zijn. Dat heet ‘normale druk glaucoom’. De behandeling bestaat uit het verlagen van de oogdruk. Ook bij normale druk glaucoom is dat vaak nodig.</h3>
     </div>
@@ -96,16 +97,11 @@
     <span class="dot"        id="dot-3"   ></span>
   </div>
   <button class="button is-primary m-2" id="infoButton">Meer Info</button>
-  <dialog class="modal" id="info-detail">
-    <div class="modal-content">
-      <p> HALLLLLLLLLOOOOOOOOOOO</p>
-    </div>
-    <button class="modal-close" id="closeModal">❌</button>
-  </dialog>
   <div id="source">
     <a href="https://verkeersregels.vvn.nl/situatie/blokkeren" target="_blank">Bron</a>
   </div>
 
+</div>
 </div>
 
 

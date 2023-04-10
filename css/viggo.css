@@ -43,7 +43,7 @@ div#comparison  {
     margin: 3vh auto auto auto;
 }
 div#comparison figure {
-    background-image: url("/images/viggo/blur_1.jpg");
+    background-image: url("/../images/viggo/blur_1.jpg");
     border-radius: 6px;
     background-size: cover;
     position: relative;
@@ -59,7 +59,7 @@ div#comparison figure > img {
     width: 100%;
 }
 div#comparison figure div {
-    background-image: url("/images/viggo/no_blur_1.jpg");
+    background-image: url("../images/viggo/no_blur_1.jpg");
     border-radius: 6px;
     background-size: cover;
     position: absolute;
@@ -184,7 +184,7 @@ input[type=range]:focus::-moz-range-thumb {
     justify-content: center;
     border: none;
     border-radius: 16px;
-    padding: 0px;
+    padding: 0;
     box-shadow: 0 16px 22px 0 rgba(0, 0, 0, 0.6);
 }
 
@@ -196,13 +196,15 @@ input[type=range]:focus::-moz-range-thumb {
 .modal::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
 }
-
+.modal-content {
+    padding: 20px !important;
+}
 .modal-close {
     position: absolute;
     top: 5px;
     right: 5px;
     outline: none;
-    appearance: none;
+    appearance: none !important;
     color: goldenrod;
     background: none;
     border: 0;
@@ -217,4 +219,8 @@ input[type=range]:focus::-moz-range-thumb {
     background-color: rgb(43, 123, 73);
     color: white;
     text-transform: capitalize;
+}
+
+.dialog-open {
+    filter: blur(10px);
 }
