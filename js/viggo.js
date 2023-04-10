@@ -1,29 +1,36 @@
-let apiUrl = "http://localhost/CLE3-Accessibility/webservice/viggo-webservice.php"
-
 window.addEventListener("load", init); // wait for the page to load
+
+let apiUrl = 'http://localhost/CLE3-Accessibility/webservice/viggo-webservice.php'
+
+/**
+ * AJAX-call to retrieve data from a webservice
+ *
+ * @param url
+ * @param successHandler
+ */
 
 // variables
 let slider = document.getElementById("slider");
 let divisor = document.getElementById("divisor");
+let apiData = {};
 
-let title = document.querySelectorAll('.titleTag');
-let moreInfo = document.querySelectorAll(".moreInfo");
 let image1;
 let image2;
 let image3;
 let button1;
 let button2;
 let button3;
+
 const opacity = 1;
 const noOpacity = 0;
+
 let resetButton;
-let modal;
-let modalBtn;
-let closeBtn;
 let storedValue;
+let comp1;
 
 // event listeners
 function init() {
+    comp1 = document.getElementById("comp-1");
     image1 = document.getElementById("img-1");
     image2 = document.getElementById("img-2");
     image3 = document.getElementById("img-3");
@@ -31,18 +38,9 @@ function init() {
     button2 = document.getElementById('dot-2');
     button3 = document.getElementById('dot-3');
     resetButton = document.getElementById("resetButton");
-
-    // get modal
-     modal = document.getElementById('info-details');
-//get open modal button
-    modalBtn = document.getElementById('infoButton');
-//get close button
-    closeBtn = document.getElementById('closeModal');
     resetButton.addEventListener('click', reset);
     imageSlider();
-    // openModal();
-    // closeModal();
-    // clickOutside();
+    ajaxRequest(apiUrl, createInfoDiv);
 }
 
 
@@ -79,6 +77,58 @@ function imageSlider(){
     });
 }
 
+function ajaxRequest(url, succesHandler) {
+    fetch(url)
+        .then((resp) => {
+            if (!resp.ok) {
+                throw new Error(resp.statusText);
+            }
+            return resp.json();
+        })
+        .then(succesHandler)
+        .catch(ajaxErrorHandler);
+}
+
+function createInfoDiv(data) {
+    for (let info of data) {
+        let infoDiv = document.createElement('div');
+        infoDiv.classList.add();
+        infoDiv.dataset.name = info.name;
+        comp1.appendChild(infoDiv);
+
+
+        // ajax request based on current id
+        ajaxRequest(apiUrl + '?id=' + info.id, fillInfoDiv);
+
+    }
+}
+
+function fillInfoDiv(data) {
+
+  let infoTitle = document.querySelectorAll(`.info-div[data-title='${data.name}']`);
+
+    let title = document.createElement("h2");
+    title.classList.add("title is-5 m-2");
+    title.innerHTML = data.title;
+    infoTitle.appendChild(title);
+
+    let infoText = document.createElement("h3");
+    infoText.classList.add("subtitle is-6 m-2");
+    infoText.innerHTML = data.description;
+    infoTitle.appendChild(infoText);
+
+    apiData[data.id] = data;
+
+}
+
+function ajaxErrorHandler(data) {
+    let error = document.createElement('div');
+    error.classList.add('error');
+    error.innerHTML = '<p>Something went wrong with the API call</p>';
+    comp1.before(error);
+}
+
+///////////////////////////
 // reset button
 function reset() {
     localStorage.clear();
@@ -106,49 +156,4 @@ window.addEventListener("load", function() {
         slider.value = storedValue;
     }
 });
-
-// get the modal
-
-// // listen for open click
-// modalBtn.addEventListener('click', openModal);
-// //listen for close click
-// closeBtn.addEventListener('click', closeModal);
-// //listen for outside click
-// window.addEventListener('click', clickOutside);
-
-//function to open modal
-// function openModal(){
-//     modal.style.display = 'block';
-// }
-//
-// //function to close modal
-// function closeModal(){
-//     modal.style.display = 'none';
-// }
-//
-// //function to close modal if outside click
-// function clickOutside(e){
-//     if(e.target == modal) {
-//         modal.style.display = 'none';
-//     }
-// }
-
-async function ajaxRequest(url) {
-    const response = await fetch(url);
-    const jsonData = await response.json();
-
-    for (let i = 0; i <= title.length; i++) {
-        title[i].innerHTML = jsonData[i].name;
-        let awu = await getInfo(jsonData[i].id);
-        moreInfo[i].innerHTML = awu.info;
-    }
-}
-
-async function getInfo(id) {
-    const response = await fetch(apiUrl+'?id='+id);
-    const jsonData = await response.json();
-    return jsonData
-}
-
-ajaxRequest(url);
 
