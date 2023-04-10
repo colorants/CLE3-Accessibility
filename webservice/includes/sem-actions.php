@@ -27,23 +27,23 @@ function getCategories()
         ],
         [
             "id" => 5,
-            "title" => "test1",
+            "title" => "goed",
             "subtitle" => "Informatie en tools voor contrast",
         ],
         [
             "id" => 6,
-            "title" => "test2",
+            "title" => "slecht",
             "subtitle" => "Informatie en tools voor contrast",
         ],
         [
             "id" => 7,
-            "title" => "test3",
+            "title" => "redelijk",
             "subtitle" => "Informatie en tools voor contrast",
         ],
         [
             "id" => 8,
-            "title" => "test4",
-            "subtitle" => "Informatie en tools voor contrast",
+            "title" => "hulpmiddelen",
+            "subtitle" => "Informatie en tools voor hulpmiddelen",
         ]
     ];
 }
@@ -76,23 +76,23 @@ function getCategoryDetails($id)
             "description" => "Everytime in the city after midnight"
         ],
         5 => [
-            "title" => "test1",
+            "title" => "goed",
             "subtitle" => "Informatie en tools voor contrast",
             "description" => "Everytime in the city after midnight"
         ],
         6 => [
-            "title" => "test2",
+            "title" => "slecht",
             "subtitle" => "Informatie en tools voor contrast",
             "description" => "Everytime in the city after midnight"
         ],
         7 => [
-            "title" => "test3",
+            "title" => "redelijk",
             "subtitle" => "Informatie en tools voor contrast",
             "description" => "Everytime in the city after midnight"
         ],
         8 => [
-            "title" => "test4",
-            "subtitle" => "Informatie en tools voor contrast",
+            "title" => "hulpmiddelen",
+            "subtitle" => "Informatie en tools voor julpmiddelen",
             "description" => "Everytime in the city after midnight"
         ]
 

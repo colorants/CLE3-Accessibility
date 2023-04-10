@@ -45,13 +45,15 @@
 .modal::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
 }
-
+.modal-content {
+    padding: 20px !important;
+}
 .modal-close {
     position: absolute;
     top: 5px;
     right: 5px;
     outline: none;
-    appearance: none;
+    appearance: none !important;
     color: goldenrod;
     background: none;
     border: 0;
@@ -71,3 +73,9 @@
 .dialog-open {
     filter: blur(10px);
 }
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
