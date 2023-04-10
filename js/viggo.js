@@ -1,4 +1,4 @@
-// let apiUrl = "http://localhost/CLE3-Accessibility/webservice/viggo-webservice.php"
+let apiUrl = "http://localhost/CLE3-Accessibility/webservice/viggo-webservice.php"
 
 window.addEventListener("load", init); // wait for the page to load
 
@@ -6,6 +6,8 @@ window.addEventListener("load", init); // wait for the page to load
 let slider = document.getElementById("slider");
 let divisor = document.getElementById("divisor");
 
+let title = document.querySelectorAll('.titleTag');
+let moreInfo = document.querySelectorAll(".moreInfo");
 let image1;
 let image2;
 let image3;
@@ -38,9 +40,9 @@ function init() {
     closeBtn = document.getElementById('closeModal');
     resetButton.addEventListener('click', reset);
     imageSlider();
-    openModal();
-    closeModal();
-    clickOutside();
+    // openModal();
+    // closeModal();
+    // clickOutside();
 }
 
 
@@ -107,28 +109,46 @@ window.addEventListener("load", function() {
 
 // get the modal
 
-// listen for open click
-modalBtn.addEventListener('click', openModal);
-//listen for close click
-closeBtn.addEventListener('click', closeModal);
-//listen for outside click
-window.addEventListener('click', clickOutside);
+// // listen for open click
+// modalBtn.addEventListener('click', openModal);
+// //listen for close click
+// closeBtn.addEventListener('click', closeModal);
+// //listen for outside click
+// window.addEventListener('click', clickOutside);
 
 //function to open modal
-function openModal(){
-    modal.style.display = 'block';
-}
+// function openModal(){
+//     modal.style.display = 'block';
+// }
+//
+// //function to close modal
+// function closeModal(){
+//     modal.style.display = 'none';
+// }
+//
+// //function to close modal if outside click
+// function clickOutside(e){
+//     if(e.target == modal) {
+//         modal.style.display = 'none';
+//     }
+// }
 
-//function to close modal
-function closeModal(){
-    modal.style.display = 'none';
-}
+async function ajaxRequest(url) {
+    const response = await fetch(url);
+    const jsonData = await response.json();
 
-//function to close modal if outside click
-function clickOutside(e){
-    if(e.target == modal) {
-        modal.style.display = 'none';
+    for (let i = 0; i <= title.length; i++) {
+        title[i].innerHTML = jsonData[i].name;
+        let awu = await getInfo(jsonData[i].id);
+        moreInfo[i].innerHTML = awu.info;
     }
 }
 
+async function getInfo(id) {
+    const response = await fetch(apiUrl+'?id='+id);
+    const jsonData = await response.json();
+    return jsonData
+}
+
+ajaxRequest(url);
 
