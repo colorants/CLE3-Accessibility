@@ -35,7 +35,7 @@ let detailDialog;
 function init() {
 
     comp1 = document.getElementById("comp-1");
-    detailContent = detailDialog.querySelector('.modal-content');
+
     detailDialog = document.getElementById('info-detail');
     detailContent = detailDialog.querySelector('.modal-content');
     detailDialog.addEventListener('click', detailModalClickHandler);
@@ -141,7 +141,6 @@ function fillInfoCard(data, infoCard) {
 function ajaxErrorHandler(data) {
     let error = document.createElement('div');
     error.classList.add('error');
-    error.innerHTML = '<p>Something went wrong with the API call</p>';
     comp1.before(error);
 }
 

@@ -7,7 +7,7 @@ function getInfo()
     return [
         [
             "id" => 1,
-            "title" => "Hoe ziet een slechtziend persoon in een winkelstraat",
+            "title" => "Persoon in een winkelstraat",
             "description" => "Wat valt op? (10% zicht)",
         ],
         [

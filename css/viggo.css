@@ -43,7 +43,7 @@ div#comparison  {
     margin: 3vh auto auto auto;
 }
 div#comparison figure {
-    background-image: url("/../images/viggo/blur_1.jpg");
+    background-image: url("../images/viggo/blur_1.jpg");
     border-radius: 6px;
     background-size: cover;
     position: relative;
@@ -170,7 +170,7 @@ input[type=range]:focus::-moz-range-thumb {
 }
 
 .hero-body-viggo {
-    background-image: url("/images/main/hero-image-1.jpg");
+    background-image: url("/../images/main/hero-image-1.jpg");
     color: #75A526; !important;
     background-size: cover; !important;
 }
