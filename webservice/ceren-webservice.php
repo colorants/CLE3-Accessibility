@@ -8,8 +8,8 @@ if (!isset($_GET['id'])) {
 } else {
     $data = getOptionDetails($_GET['id']);
 }
-
 //Set the header & output JSON so the client will know what to expect.
-header("Content-Type: application/json");
+
+header("Access-Control-Allow-Headers: X-Requested-With");
 echo json_encode($data);
 exit;
