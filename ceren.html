@@ -1,19 +1,20 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link  rel="stylesheet" href="css/ceren.css">
+  <link rel="stylesheet" href="css/ceren.css">
   <link rel="stylesheet" href="css/navbar.css">
 
 
   <title>Ceren</title>
 
 </head>
-<section class= "hero">
+<section class="hero">
   <div class="hero-body hero-body-ceren">
     <p class="title" id="brandTitle">
       Blinfo
@@ -41,78 +42,104 @@
   </div>
 </nav>
 </header>
+
 <body>
 <div class="main">
   <section class="hero">
-  <div class="hero-body" >
-    <p class="title is-2 has-text-centered">
-      Online winkelen voor slechtziende
-    </p>
-  </div>
+    <div class="hero-body">
+      <p class="title is-2 has-text-centered">
+        Online winkelen voor slechtziende
+      </p>
+    </div>
   </section>
 
 
 
-<div class="m-4">
-  <div class="tile is-ancestor">
-    <div class="tile is-parent">
-      <article class="tile is-child box">
-        <p class="title">Links</p>
-        <img src="images/ceren/texts.png">
-        <div>
+  <div class="m-4">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <p class="title headers"></p>
+          <img src="images/ceren/texts.png">
           <div>
-            <a class="button" href="#popup1">Meer informatie</a>
-          </div>
+            <div>
+              <a class="button"  href="#popup1">Meer informatie</a>
+            </div>
+            <div>
+              <button id="favButt1" class="button favButt">
+                <3 </button>
+            </div>
 
-        </div>
-      </article>
-    </div>
-    <div class="tile is-parent">
-      <article class="tile is-child box">
-        <p class="title">Lettertype grootte</p>
-        <img src="images/ceren/letters.png">
-        <div>
-          <a class="button" href="#popup2">Meer informatie</a>
-        </div>
-      </article>
-    </div>
-    <div class="tile is-parent">
-      <article class="tile is-child box">
-        <p class="title">Contrast</p>
-        <img src="images/ceren/contrast.png">
-        <div>
-          <a class="button" href="#popup3">Meer informatie</a>
-        </div>
-      </article>
+
+          </div>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <p class="title headers"></p>
+          <img src="images/ceren/letters.png">
+          <div>
+            <a class="button"  href="#popup2">Meer informatie</a>
+          </div>
+          <div>
+            <button id="favButt2" class="button favButt">
+              <3 </button>
+          </div>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <p class="title headers"></p>
+          <img src="images/ceren/contrast.png">
+          <div>
+            <a class="button"  href="#popup3">Meer informatie</a>
+          </div>
+          <div>
+            <button id="favButt3" class="button favButt">
+              <3 </button>
+          </div>
+        </article>
+      </div>
     </div>
   </div>
-</div>
 
   <div class="tile is-ancestor">
     <div class="tile is-parent">
       <article class="tile is-child box">
-        <p class="title">Lettertype</p>
+        <p class="title headers"></p>
         <img src="images/ceren/style.png">
         <div>
-          <a class="button" href="#popup4">Meer informatie</a>
+          <a class="button"  href="#popup4">Meer informatie</a>
+        </div>
+        <div>
+          <button id="favButt4" class="button favButt">
+            <3 </button>
         </div>
       </article>
     </div>
     <div class="tile is-parent">
       <article class="tile is-child box">
-        <p class="title">Zwart wit</p>
+        <p class="title headers"></p>
         <img src="images/ceren/zwartwit.png">
         <div>
           <a class="button" href="#popup5">Meer informatie</a>
         </div>
+        <div>
+          <button id="favButt5" class="button favButt">
+            <3 </button>
+        </div>
       </article>
     </div>
     <div class="tile is-parent">
       <article class="tile is-child box">
-        <p class="title">Spraak</p>
+        <p class="title headers"></p>
         <img src="images/ceren/geluid.png">
         <div>
           <a class="button" href="#popup6">Meer informatie</a>
+        </div>
+        <div>
+          <button id="favButt6" class="button favButt">
+            <3 </button>
         </div>
       </article>
     </div>
@@ -124,8 +151,8 @@
     <div class="popup">
       <h2>Onderstreepte links</h2>
       <a class="close" href="#">&times;</a>
-      <div class="content">
-        meow1
+      <div class="content details">
+
       </div>
     </div>
   </div>
@@ -133,8 +160,8 @@
     <div class="popup">
       <h2>Lettertype grootte</h2>
       <a class="close" href="#">&times;</a>
-      <div class="content">
-        meow2
+      <div class="content details">
+
       </div>
     </div>
   </div>
@@ -142,8 +169,8 @@
     <div class="popup">
       <h2>Contrast</h2>
       <a class="close" href="#">&times;</a>
-      <div class="content">
-        meow3
+      <div class="content details">
+
       </div>
     </div>
   </div>
@@ -151,8 +178,8 @@
     <div class="popup">
       <h2>Lettertype</h2>
       <a class="close" href="#">&times;</a>
-      <div class="content">
-        meow4
+      <div class="content details">
+
       </div>
     </div>
   </div>
@@ -160,8 +187,8 @@
     <div class="popup">
       <h2>Zwart/wit</h2>
       <a class="close" href="#">&times;</a>
-      <div class="content">
-        meow5
+      <div class="content details">
+
       </div>
     </div>
   </div>
@@ -169,13 +196,34 @@
     <div class="popup">
       <h2>Spraak</h2>
       <a class="close" href="#">&times;</a>
-      <div class="content">
-        meow6
+      <div class="content details">
+
       </div>
     </div>
   </div>
 </div>
-</body>
+<footer>
+  <div class="footer">
+    <div class="content has-text-centered">
+      <div class="menu">
+        <a href="index.html" class="menu-label">Home</a>
+        <a href="sem.html" class="menu-label">Sem</a>
+        <a href="ceren.html" class="menu-label">Ceren</a>
+        <a href="jordan.html" class="menu-label">Jordan</a>
+        <a href="viggo.html" class="menu-label">Viggo</a>
+      </div>
+      <p class="is-text">
+        <strong>Blinfo</strong> door <a href="https://github.com/colorants/CLE3-Accessibility">groep8</a>.
+        De broncode is gelicentieerd
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. De inhoud van de website is
+        gelicentieerd <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
+      </p>
+    </div>
+  </div>
+</footer>
 <script src="js/ceren.js"></script>
+
+</body>
+
 
 </html>
