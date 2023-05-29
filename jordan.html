@@ -1,105 +1,80 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/jordan.css">
-  <link rel="stylesheet" href="css/navbar.css">
-  <title>Winkelen in Rotterdam</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/jordan.css">
+    <title>Winkels</title>
 
 </head>
-<header>
-  <div class="nav-container">
-    <section class="hero">
-      <div class="hero-body hero-body-jordan">
-        <p class="title" id="brandTitle">
-          Blinfo
-        </p>
 
-      </div>
+<header>
+    <section class="hero">
+        <div class="hero-body hero-body-jordan">
+            <p class="title" id="brandTitle">
+                Blinfo
+            </p>
+        </div>
     </section>
-  <nav>
-      <div id="navbar" class="navbar-menu has-background-primary">
-        <a class="navbar-item" href="index.html">
-          Home
-        </a>
-        <a class="navbar-item" href="sem.html">
-          Sem
-        </a>
-        <a class="navbar-item" href="ceren.html">
-          Ceren
-        </a>
-        <a class="navbar-item" href="jordan.html">
-          Jordan
-        </a>
-        <a class="navbar-item" href="viggo.html">
-          Viggo
-        </a>
-      </div>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div id="navbar" class="navbar-menu has-background-primary">
+            <a class="navbar-item" href="index.html">
+                Home
+            </a>
+            <a class="navbar-item" href="sem.html">
+                Sem
+            </a>
+            <a class="navbar-item" href="ceren.html">
+                Ceren
+            </a>
+            <a class="navbar-item" href="jordan.html">
+                Jordan
+            </a>
+            <a class="navbar-item" href="viggo.html">
+                Viggo
+            </a>
+            <div class="navbar-item">
+                <button class="button is-primary" id="dark-mode">
+                    <strong>Dark mode</strong>
+                </button>
+            </div>
+        </div>
     </nav>
-  </div>
 </header>
 <body>
+<section class="section is-large">
+    <div class=" tile is-ancestor " id="info-gallery">
 
-<section class="section has-bg-img is-large">
-</section>
-
-<section class="section is-medium">
-  <h1 class="title">Waarom Blinfo</h1>
-  <h2 class="subtitle">
-    Wij zijn als klein groepje van 4 toffe mensen, bereidt om de mensen met een visuele beperking de winkel regio van Rotterdam wat toegankelijker en veiliger te maken.   </h2>
-</section>
-<hr class="style-four">
-
-<section class="section is-medium">
-  <h1 class="title"><u>Regio Rotterdam</u></h1>
-  <h2 class="subtitle">
-    Rotterdam staat nou niet bepaald bekend om de toegankelijkheid van winkels wat vriendelijker te maken voor mensen met een visuele beperking. Daarom zijn wij op jacht gegaan naar winkels in Rotterdam die dat wel aanbieden. Wij hebben alle winkels genoteerd en zijn hier op de website te vinden.   </h2>
-</section>
-
-<h1 id="main-heading">Alle Toegankelijke Winkels</h1>
-
-<div class="image-container">
-  <div class="image-item">
-    <img src="/images/jordan/zara.jpg" alt="zara image">
-    <a href="https://www.google.com/maps/dir//ZARA,+Beursplein+8,+3011+AA+Rotterdam/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x47c4335ed04b6e73:0x7a4950c662230c80?sa=X&ved=2ahUKEwiLw5CUlZH-AhX1i_0HHSCeCBMQ48ADegQIIhAK"><button class="btn-1">Click me</button></a>
-    <div class="like-button">
-      <img src="/images/jordan/like_button.png"  width="40px" height="30px" onclick="clickCounter()">
-      <h2 id="num_count"></h2>
-      <button class="button is-primary m-2" id="resetButton">Reset</button>
+        <dialog class="modal" id="info-detail">
+            <div class="modal-content" id="modal-content"></div>
+            <button class="modal-close button" id="modal-close-1"></button>
+        </dialog>
     </div>
-  </div>
-  <div class="image-item">
-    <img src="/images/jordan/hm.png" alt="h&m image">
-    <a href="https://www.google.com/maps/dir//H%26M,+Lijnbaan+173,+3012+EN+Rotterdam/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x47c4335f5e4ecdcb:0xbbf662dc033a5377?sa=X&ved=2ahUKEwi0hOO5lZH-AhVMgP0HHTxtBpYQ48ADegQIKRAJ"><button class="btn-2">Click me</button></a>
-  </div>
-  <div class="image-item">
-    <img src="/images/jordan/ca.jpg" alt="c&a image">
-    <a href="https://www.google.com/maps/dir//C%26A,+Korte+Hoogstraat+10,+3011+GL+Rotterdam/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x47c4335f27db1655:0x9862d520c618d3cc?sa=X&ved=2ahUKEwjHoLrGlZH-AhVSgv0HHatkAxsQ48ADegQIKRAK"><button class="btn-3">Click me</button></a>
-  </div>
-</div>
+</section>
 
-<script type="text/javascript" src="/js/jordan.js"></script>
-<footer>
-  <div class="footer">
-    <div class="content has-text-centered">
-      <div class="menu">
-        <a href="index.html" class="menu-label">Home</a>
-        <a href="sem.html" class="menu-label">Sem</a>
-        <a href="ceren.html" class="menu-label">Ceren</a>
-        <a href="jordan.html" class="menu-label">Jordan</a>
-        <a href="viggo.html" class="menu-label">Viggo</a>
-      </div>
-      <p class="is-text">
-        <strong>Blinfo</strong> door <a href="https://github.com/colorants/CLE3-Accessibility">groep8</a>. De broncode is gelicentieerd
-        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. De inhoud van de website is gelicentieerd <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
-      </p>
-    </div>22
-  </div>
-</footer>
-
+<script src="js/jordan.js"></script>
 </body>
+<footer>
+    <div class="footer">
+        <div class="content has-text-centered">
+            <div class="menu">
+                <a href="index.html" class="menu-label">Home</a>
+                <a href="sem.html" class="menu-label">Sem</a>
+                <a href="ceren.html" class="menu-label">Ceren</a>
+                <a href="jordan.html" class="menu-label">Jordan</a>
+                <a href="viggo.html" class="menu-label">Viggo</a>
+            </div>
+            <p class="is-text">
+                <strong>Blinfo</strong> door <a href="https://github.com/colorants/CLE3-Accessibility">groep8</a>. De
+                broncode is gelicentieerd
+                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. De inhoud van de website is
+                gelicentieerd <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
+            </p>
+        </div>
+    </div>
+</footer>

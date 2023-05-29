@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @return array
  */
@@ -8,15 +7,43 @@ function getInfo()
     return [
         [
             "id" => 1,
-            "name" => "Zara",
+            "title" => "Zara",
+            "subtitle" => "Informatie en tools voor herkenning",
         ],
         [
             "id" => 2,
-            "name" => "h&m",
+            "title" => "C&A",
+            "subtitle" => "Informatie en tools voor low vision",
         ],
         [
             "id" => 3,
-            "name" => "c&a",
+            "title" => "ASOS",
+            "subtitle" => "Informatie en tools voor service",
+        ],
+        [
+            "id" => 4,
+            "title" => "Nike",
+            "subtitle" => "Informatie en tools voor contrast",
+        ],
+        [
+            "id" => 5,
+            "title" => "Pull & Beer",
+            "subtitle" => "Informatie en tools voor contrast",
+        ],
+        [
+            "id" => 6,
+            "title" => "slecht",
+            "subtitle" => "Informatie en tools voor contrast",
+        ],
+        [
+            "id" => 7,
+            "title" => "redelijk",
+            "subtitle" => "Informatie en tools voor contrast",
+        ],
+        [
+            "id" => 8,
+            "title" => "hulpmiddelen",
+            "subtitle" => "Informatie en tools voor hulpmiddelen",
         ]
     ];
 }
@@ -29,13 +56,44 @@ function getInfoDetails($id)
 {
     $tags = [
         1 => [
-            "location" => "Binnenwegplein 31, 3012 KA Rotterdam",
+            "title" => "Zara",
+            "subtitle" => "Informatie en tools voor herkenning",
+            "description" => "Put it in the oven and go!"
         ],
         2 => [
-            "location" => "Binnenwegplein 31, 3012 KA Rotterdam",
+            "title" => "C&A",
+            "subtitle" => "Informatie en tools voor low vision",
+            "description" => "You can make this delicious Dutch meal by ..."
         ],
         3 => [
-            "location" => "Binnenwegplein 31, 3012 KA Rotterdam",
+            "title" => "ASOS",
+            "subtitle" => "Informatie en tools voor service",
+            "description" => "Very nice when your grandma prepares this meal"
+        ],
+        4 => [
+            "title" => "Nike",
+            "subtitle" => "Informatie en tools voor contrast",
+            "description" => "Everytime in the city after midnight"
+        ],
+        5 => [
+            "title" => "Pull & Beer",
+            "subtitle" => "Informatie en tools voor contrast",
+            "description" => "Everytime in the city after midnight"
+        ],
+        6 => [
+            "title" => "slecht",
+            "subtitle" => "Informatie en tools voor contrast",
+            "description" => "Everytime in the city after midnight"
+        ],
+        7 => [
+            "title" => "redelijk",
+            "subtitle" => "Informatie en tools voor contrast",
+            "description" => "Everytime in the city after midnight"
+        ],
+        8 => [
+            "title" => "hulpmiddelen",
+            "subtitle" => "Informatie en tools voor julpmiddelen",
+            "description" => "Everytime in the city after midnight"
         ]
 
     ];
